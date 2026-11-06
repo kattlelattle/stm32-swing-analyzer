@@ -1,0 +1,14 @@
+# STM32CubeIDE build output and local settings
+Debug/
+Release/
+.metadata/
+*.launch
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
