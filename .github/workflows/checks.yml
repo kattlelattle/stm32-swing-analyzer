@@ -1,4 +1,4 @@
-#runs on every push: pc logic tests and an arm compile check, neither uses the board
+#runs on every push: pc logic tests and a full arm firmware build, neither uses the board
 name: checks
 on: [push, pull_request]
 jobs:
@@ -11,9 +11,15 @@ jobs:
           python-version: "3.12"
       - run: make -C firmware/host_test
       - run: python python/test_host.py
-  arm-compile:
+  arm-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi
-      - run: bash firmware/ci/compile_check.sh
+      - run: bash firmware/ci/build_firmware.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: swing-analyzer-firmware
+          path: |
+            firmware/ci/build/swing_analyzer.elf
+            firmware/ci/build/swing_analyzer.bin

@@ -12,6 +12,7 @@ __pycache__/
 # PC test build
 firmware/host_test/host_sim
 firmware/host_test/host_sim.exe
+firmware/ci/build/
 
 # OS files
 .DS_Store
