@@ -1,0 +1,19 @@
+﻿================================================================
+DROPPED SAMPLES (sequence counter)
+  expected 299997 samples (~300.0 s at 1 kHz), received 299997, missing 0
+  loss rate: 0.0000 %
+  board counters at last status: missed_reads=0 ring_overflows=0 tx_dropped=0 spi_errors=0
+  PC side: bad CRC packets=0, skipped bytes=9
+
+SAMPLING RATE + JITTER (DWT cycle counter, measured by the MCU's own clock)
+  intervals analysed: 299996 (gaps excluded), core clock 180000000 Hz
+  mean period 1000.000 us  ->  rate 1000.000 Hz
+  period min 999.978 us, max 1000.022 us, peak-to-peak 0.044 us
+  std dev 0.001 us
+  max |period - 1000 us| = 0.022 us
+  99.9th percentile period 1000.000 us
+  NOTE: rate accuracy here is only as good as the MCU clock. Confirm the
+        rate with the scope on pin D7.
+  (configured timer rate: 1000.000 Hz - setting, not a measurement)
+
+SWINGS (detected on the board): 0

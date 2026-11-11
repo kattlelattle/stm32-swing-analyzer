@@ -1,0 +1,39 @@
+﻿================================================================
+DROPPED SAMPLES (sequence counter)
+  expected 99589 samples (~99.6 s at 1 kHz), received 99589, missing 0
+  loss rate: 0.0000 %
+  board counters at last status: missed_reads=0 ring_overflows=0 tx_dropped=0 spi_errors=0
+  PC side: bad CRC packets=0, skipped bytes=25
+
+SAMPLING RATE + JITTER (DWT cycle counter, measured by the MCU's own clock)
+  intervals analysed: 99588 (gaps excluded), core clock 180000000 Hz
+  mean period 1000.000 us  ->  rate 1000.000 Hz
+  period min 999.978 us, max 1000.022 us, peak-to-peak 0.044 us
+  std dev 0.001 us
+  max |period - 1000 us| = 0.022 us
+  99.9th percentile period 1000.000 us
+  NOTE: rate accuracy here is only as good as the MCU clock. Confirm the
+        rate with the scope on pin D7.
+  (configured timer rate: 1000.000 Hz - setting, not a measurement)
+
+SWINGS (detected on the board): 20
+  #  1  peak   477.6 deg/s  duration 743 ms
+  #  2  peak   519.5 deg/s  duration 746 ms
+  #  3  peak   626.7 deg/s  duration 744 ms
+  #  4  peak   619.0 deg/s  duration 728 ms
+  #  5  peak   648.8 deg/s  duration 747 ms
+  #  6  peak   663.6 deg/s  duration 663 ms
+  #  7  peak   683.6 deg/s  duration 706 ms
+  #  8  peak   686.9 deg/s  duration 749 ms
+  #  9  peak   686.8 deg/s  duration 645 ms
+  # 10  peak   669.1 deg/s  duration 693 ms
+  # 11  peak   694.9 deg/s  duration 665 ms
+  # 12  peak   761.1 deg/s  duration 806 ms
+  # 13  peak   651.8 deg/s  duration 736 ms
+  # 14  peak   684.9 deg/s  duration 738 ms
+  # 15  peak   700.7 deg/s  duration 671 ms
+  # 16  peak   565.9 deg/s  duration 561 ms
+  # 17  peak   696.5 deg/s  duration 670 ms
+  # 18  peak   716.9 deg/s  duration 691 ms
+  # 19  peak   746.0 deg/s  duration 646 ms
+  # 20  peak   768.2 deg/s  duration 709 ms

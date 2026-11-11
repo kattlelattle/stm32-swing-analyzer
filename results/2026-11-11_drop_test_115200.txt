@@ -1,0 +1,9 @@
+﻿================================================================
+DROPPED SAMPLES (sequence counter)
+  expected 30039 samples (~30.0 s at 1 kHz), received 13270, missing 16769
+  loss rate: 55.8241 %
+  board counters at last status: missed_reads=0 ring_overflows=0 tx_dropped=19452 spi_errors=0
+  PC side: bad CRC packets=0, skipped bytes=9
+
+SAMPLING RATE + JITTER (DWT cycle counter, measured by the MCU's own clock)
+  intervals analysed: 12928 (gaps excluded), core clock 180000000 Hz

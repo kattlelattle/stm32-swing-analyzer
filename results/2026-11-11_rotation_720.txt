@@ -1,0 +1,29 @@
+﻿================================================================
+DROPPED SAMPLES (sequence counter)
+  expected 120056 samples (~120.1 s at 1 kHz), received 120056, missing 0
+  loss rate: 0.0000 %
+  board counters at last status: missed_reads=0 ring_overflows=0 tx_dropped=0 spi_errors=0
+  PC side: bad CRC packets=0, skipped bytes=0
+
+SAMPLING RATE + JITTER (DWT cycle counter, measured by the MCU's own clock)
+  intervals analysed: 120055 (gaps excluded), core clock 180000000 Hz
+  mean period 1000.000 us  ->  rate 1000.000 Hz
+  period min 999.978 us, max 1000.022 us, peak-to-peak 0.044 us
+  std dev 0.001 us
+  max |period - 1000 us| = 0.022 us
+  99.9th percentile period 1000.000 us
+  NOTE: rate accuracy here is only as good as the MCU clock. Confirm the
+        rate with the scope on pin D7.
+  (configured timer rate: 1000.000 Hz - setting, not a measurement)
+
+SWINGS (detected on the board): 0
+================================================================
+ROTATION CHECK on gyro Z axis, target 720 deg per turn
+  zero-rate bias from 59433 still samples: -0.311 deg/s (subtracted)
+  turn 1:  -723.97 deg   error +0.55 %   (14.0 s)
+  turn 2:  +727.98 deg   error +1.11 %   (10.9 s)
+  turn 3:  -725.53 deg   error +0.77 %   (12.9 s)
+  turn 4:  +726.39 deg   error +0.89 %   (11.8 s)
+  turn 5:  -724.19 deg   error +0.58 %   (11.1 s)
+  turns: 5   mean error +0.78 %   worst +1.11 %
+  the result also includes how exactly each turn was lined up by hand
