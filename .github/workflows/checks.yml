@@ -1,0 +1,19 @@
+#runs on every push: pc logic tests and an arm compile check, neither uses the board
+name: checks
+on: [push, pull_request]
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: make -C firmware/host_test
+      - run: python python/test_host.py
+  arm-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi
+      - run: bash firmware/ci/compile_check.sh

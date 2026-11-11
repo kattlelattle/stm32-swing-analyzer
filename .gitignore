@@ -9,6 +9,10 @@ __pycache__/
 *.pyc
 .venv/
 
+# PC test build
+firmware/host_test/host_sim
+firmware/host_test/host_sim.exe
+
 # OS files
 .DS_Store
 Thumbs.db
