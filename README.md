@@ -3,7 +3,7 @@
 A swing analyzer for a tennis racket, built with an STM32 Nucleo-F446RE and a BMI270 IMU. It samples the IMU at 1 kHz, detects each swing on the microcontroller, and shows swing speed and swing count live on a Python dashboard.
 
 <p align="center">
-  <img src="images/racket.jpg" alt="Nucleo and IMU taped to the throat of a tennis racket" width="620">
+  <img src="images/racket.png" alt="Nucleo and IMU taped to the throat of a tennis racket" width="620">
 </p>
 
 ## Results
@@ -44,6 +44,10 @@ The part I like most is the dropped-sample check. A counter that has only ever r
 | SDA | MOSI | D11 (PA7) |
 | ADR | MISO | D12 (PA6) |
 | CS | Chip select | D10 (PB6) |
+
+<p align="center">
+  <img src="images/closeup.jpg" alt="BMI270 on the breadboard at the racket throat, wired to the Nucleo" width="380">
+</p>
 
 D7 (PA8) is a debug pin that goes high during each sensor read, for checking the timing on an oscilloscope. Data goes to the PC through the Nucleo's USB port.
 
