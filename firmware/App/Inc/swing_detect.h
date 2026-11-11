@@ -20,6 +20,7 @@ typedef struct {
     uint16_t min_samples;   //shorter ones are ignored (bumps, taps)
     uint16_t max_samples;   //longer ones are ignored (twirling the racket)
     uint16_t cooldown_samples;
+    uint8_t  skip_axis;     //gyro axis left out of |gyro| (0 x, 1 y, 2 z, 3 none)
 } swing_cfg_t;
 
 typedef enum { SW_IDLE = 0, SW_IN_SWING, SW_COOLDOWN } swing_state_t;

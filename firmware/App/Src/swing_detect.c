@@ -25,11 +25,12 @@ void swing_init(swing_detector_t *d, const swing_cfg_t *cfg)
     d->count = 0;
 }
 
-static uint32_t mag2(const int16_t g[3])
+static uint32_t mag2(const int16_t g[3], uint8_t skip_axis)
 {
     //max is 3 * 32768^2 = 3.2e9 which still fits in a uint32
     uint32_t s = 0;
     for (int i = 0; i < 3; i++) {
+        if (i == skip_axis) continue;
         int32_t v = g[i];
         s += (uint32_t)(v * v);
     }
@@ -39,7 +40,7 @@ static uint32_t mag2(const int16_t g[3])
 bool swing_update(swing_detector_t *d, uint32_t seq, const int16_t gyr[3],
                   uint8_t sample_flags, swing_event_t *ev)
 {
-    uint32_t m2 = mag2(gyr);
+    uint32_t m2 = mag2(gyr, d->cfg.skip_axis);
 
     switch (d->state) {
     case SW_IDLE:

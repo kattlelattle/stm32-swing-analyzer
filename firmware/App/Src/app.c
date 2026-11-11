@@ -35,6 +35,8 @@ static const swing_cfg_t SWING_CFG = {
     .min_samples      = 50,               //50 ms
     .max_samples      = 2000,             //2 s
     .cooldown_samples = 300,              //300 ms
+    .skip_axis        = 1,                //y runs along the handle on this mount, spinning the racket in
+                                          //your hand is almost all y and was counted as swings
 };
 
 //ring buffer, the interrupt adds samples and the main loop takes them out
